@@ -1,3 +1,1440 @@
-<html>
-<h1>Replication Package - MSR</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>MSR 2024</title>
+
+    <link rel="shortcut icon" type="image/png" href="images/RStudio.ico"/>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->    
+
+</head>
+
+<body id="page-top" class="index" onLoad="LoadOnce()">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">MSR 2024</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>                    
+                    <li class="page-scroll">
+                        <a href="#about">PAPER Summary</a>
+                    </li>                    
+                    <li class="page-scroll">
+                        <a href="#results">Results</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#datasets">REPRODUCTION PACKAGE</a>
+                    </li>                     
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <br>
+                    <br>
+                    <!--<img class="img-responsive" src="img/profile.png" alt="">-->
+                    <div class="intro-text">
+                        <h1>How do Machine Learning Projects use Continuous Integration Practices? An Empirical Study on GitHub Actions</h1>
+                        <hr class="star-light">
+                    </div>
+                </div>                
+            </div>            
+            <div class="row">                
+                <div class="col-lg-12">
+                <br>
+                </div>                          
+            </div>
+            
+        </div>
+    </header>    
+
+    <!-- About Section -->
+    <section id="about">
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>PAPER SUMMARY</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-justify">                    
+                
+
+                    <p>In this study, we conduct a comprehensive analysis of <b><a href="#studied-projects" class="portfolio-link" data-toggle="modal">185 open-source projects</a></b> on GitHub (93 ML and 92 non-ML projects). Our investigation comprises both quantitative and qualitative dimensions, aiming to uncover differences in CI adoption between ML and non-ML projects. 
+                    
+                    <br><br>
+                    In particular, we address the following research questions:
+                    <br><br>
+                    </p>
+                    <p style="padding-left:40px;padding-right:40px;">
+                    <b>RQ1:</b>  To what extent do CI sub-practices adoption differ between ML and non-ML projects?                 
+                    <br><br>                    
+                    <b>RQ2:</b> What are the evolution trends of build duration and test coverage within ML and Non-ML projects?
+                  
+                    <br><br>                    
+                    <b>RQ3.</b> What do ML and non-ML developers discuss about CI in their projects?
+                    </p>                                                                                                                        
+                </div>                                                
+            </div>
+        </div>
+    </section>
+
+	<!-- Portfolio Grid Section -->
+    <section id="results">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Results</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+            	<div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p>Here we present the results for each RQ that we address.
+                    <br><br>
+                    <p class="text-justify">
+                    <b>RQ1. To what extent do CI sub-practices adoption differ between ML and non-ML projects?</b>
+                    <br>
+                    <br>
+                     ML projects tend to require a longer build duration. In addition, medium-sized ML projects tend to have a lower test coverage.
+                    <!-- <br><br> -->
+                    </p>
+                    <!-- <p class="text-center">
+                        <a href="#rq1-mww-test-and-cliff-delta-results" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ1: See Mann-Whitney-Wilcoxon test result and Cliff's delta values</b>
+                        </a>
+                    </p> -->
+                    <p class="text-justify">
+                    <br>
+                    <b>RQ2. What are the evolution trends of build duration and test coverage within ML and Non-ML projects?</b>
+                    <br>
+                    <br>
+                    Small and medium-sized ML projects manifest higher increasing build duration trends (75% and 61.4%) compared to non-ML projects (35.7% and 44.7%). Furthermore, both ML and non-ML projects manifest a maintaining test coverage trend, even with 46% of the medium ML projects exhibiting a median coverage rate below 75%.
+                    <br><br>
+                                        
+                    <p class="text-justify">
+                    
+                    <b>RQ3. What do ML and non-ML developers discuss about CI in their projects?</b>
+                    <br><br>
+                    Both ML and non-ML projects share common discussions on CI Build Execution and Status, CI Infrastructure, CI Pipeline Configuration, and CI Testing and Code Quality. However, ML projects exhibit a more extensive range of CI-related themes (74 themes) compared to non-ML projects (24 themes). Notably, a significant difference arises in the prevalence of the "relatedness of failures" theme in ML project discussions, indicating a potential higher incidence of false positives in their CI systems.
+                    <br><br>
+                    <!-- <p class="text-center">
+                        <a href="#rq3-r-squared-and-optimism" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ3: R² and R² optimism</b>
+                        </a>
+                    </p> -->
+                    <!-- <br>
+                    <p class="text-center">
+                        <a href="#rq3-variables-explanatory-power" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ3: Explanatory Power of the models' variables (Before and After CI)</b>
+                        </a>
+                    </p> -->
+                    <p class="text-justify">
+                    </p>                     
+                    </p>                    
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    <section id="datasets">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>REPRODUCTION PACKAGE</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p>
+                    For replication purpose, we publicize our <b>REPRODUCTION PACKAGE</b>, including figures, datasets and scripts to the interested researcher.
+                    </p>
+                    <br>                    
+                    <br>
+                </div>                
+
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <br>
+                    <p>
+                    Use the link below to <b>download the reproduction package</b>.
+                    </p>                    
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">                  
+
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="data/reproduction-package.zip" class="btn btn-success">
+                        <i class="glyphicon glyphicon-download"></i> <b>Download the reproduction package</b>
+                    </a>
+                </div>                                
+            </div>
+        </div>
+    </section>    
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-12">
+                        <h4>MSR 2024</h4>
+                    </div>                    
+                </div>
+            </div>
+        </div>        
+    </footer>
+
+
+    <!-- Modals -->
+    <div class="portfolio-modal modal fade" id="studied-projects" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3>Projects Information</h3>
+                            <hr class="star-primary">
+                            <p>The table below shows the full name of each project of our database and general informations regarding project.</p>
+                            <div id='projects-information'>
+                                <table class="table table-striped table-condensed datatable" id="projects-information-table">                                                            
+                                    <thead><tr><th title="Field #1">Category</th>
+                                    <th title="Field #2">fullName</th>
+                                    <th title="Field #3">defaultBranch</th>
+                                    <th title="Field #4">language</th>
+                                    </tr></thead>
+                                    <tbody><tr>
+                                    <td>ML</td>
+                                    <td>Acellera/moleculekit</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>amark/gun</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>BLKSerene/Wordless</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>chakki-works/doccano</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>coin-or/Gravity</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>criteo/tf-yarn</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>CyberReboot/poseidon</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>DandyDev/slack-machine</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>dbiir/UER-py</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>deepchem/deepchem</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>deepfakes/faceswap</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>diffgram/diffgram</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>Drakkar-Software/OctoBot</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>EmergentOrder/onnx-scala</td>
+                                    <td>main</td>
+                                    <td>Scala</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>FluxML/NNlib.jl</td>
+                                    <td>master</td>
+                                    <td>Julia</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>henrysky/astroNN</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>LaurentMazare/tch-rs</td>
+                                    <td>main</td>
+                                    <td>Rust</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>microsoft/onnxruntime</td>
+                                    <td>main</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>microsoft/pai</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>mlflow/mlflow</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>msdslab/automated-systematic-review</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>OpenKore/openkore</td>
+                                    <td>master</td>
+                                    <td>Perl</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>OpenNMT/OpenNMT-py</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>polyaxon/polyaxon-chart</td>
+                                    <td>master</td>
+                                    <td>Smarty</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>QuantumBFS/Yao.jl</td>
+                                    <td>master</td>
+                                    <td>Julia</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>SeldonIO/seldon-core</td>
+                                    <td>master</td>
+                                    <td>HTML</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>SMTorg/smt</td>
+                                    <td>master</td>
+                                    <td>Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>tesseract-ocr/tesseract</td>
+                                    <td>main</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>Texera/texera</td>
+                                    <td>master</td>
+                                    <td>Java</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>uber/ludwig</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>ultralytics/yolov3</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>VowpalWabbit/vowpal_wabbit</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>zhenghaoz/gorse</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>alan-turing-institute/sktime</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>albu/albumentations</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>allenai/allennlp</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>analysiscenter/batchflow</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>apache/incubator-mxnet</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>arraiyopensource/kornia</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>BehaviorTree/BehaviorTree.CPP</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>biolab/orange3</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>comic/grand-challenge.org</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>davisking/dlib</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>dmlc/tvm</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>dmlc/xgboost</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>espnet/espnet</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>FluxML/Flux.jl</td>
+                                    <td>master</td>
+                                    <td>Julia</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>FluxML/Metalhead.jl</td>
+                                    <td>master</td>
+                                    <td>Julia</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>geomstats/geomstats</td>
+                                    <td>master</td>
+                                    <td>Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>gojek/feast</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>h2oai/h2o-3</td>
+                                    <td>master</td>
+                                    <td>Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>h2oai/sparkling-water</td>
+                                    <td>master</td>
+                                    <td>Scala</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>huggingface/pytorch-pretrained-BERT</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>intel-analytics/BigDL</td>
+                                    <td>main</td>
+                                    <td>Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>iterative/dvc</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>JohnSnowLabs/spark-nlp</td>
+                                    <td>master</td>
+                                    <td>Scala</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>jtablesaw/tablesaw</td>
+                                    <td>master</td>
+                                    <td>Java</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>kendryte/nncase</td>
+                                    <td>master</td>
+                                    <td>C#</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>materialsvirtuallab/megnet</td>
+                                    <td>master</td>
+                                    <td>Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>microsoft/dowhy</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>microsoft/LightGBM</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>mlpack/mlpack</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>mne-tools/mne-cpp</td>
+                                    <td>main</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>nilearn/nilearn</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>nipy/dipy</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>onnx/onnx</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>opencv/dldt</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>pfnet/optuna</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>pytorch/ignite</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>pytorch/tnt</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>pytorch/vision</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>rflamary/POT</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>RubixML/RubixML</td>
+                                    <td>master</td>
+                                    <td>PHP</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>scikit-learn/scikit-learn</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>shimat/opencvsharp</td>
+                                    <td>master</td>
+                                    <td>C#</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>skorch-dev/skorch</td>
+                                    <td>master</td>
+                                    <td>Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>smistad/FAST</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>sorgerlab/indra</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>Tencent/ncnn</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>tensorflow/addons</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>tensorly/tensorly</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>textlint/textlint</td>
+                                    <td>master</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>TuringLang/Turing.jl</td>
+                                    <td>master</td>
+                                    <td>Julia</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>williamFalcon/pytorch-lightning</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>yasserfarouk/negmas</td>
+                                    <td>master</td>
+                                    <td>Jupyter Notebook</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>zalandoresearch/flair</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>zhongkaifu/Seq2SeqSharp</td>
+                                    <td>master</td>
+                                    <td>C#</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>adaltas/node-csv</td>
+                                    <td>master</td>
+                                    <td>CoffeeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>cmusphinx/pocketsphinx</td>
+                                    <td>master</td>
+                                    <td>C</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>facebookresearch/fairseq</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>fireeye/flare-floss</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>jacomyal/sigma.js</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>jwilder/docker-gen</td>
+                                    <td>main</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>macbre/analyze-css</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>microsoft/TypeScript</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>microsoft/monaco-editor</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>mishoo/UglifyJS</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>muukii/Pixel</td>
+                                    <td>main</td>
+                                    <td>Swift</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>ofek/hatch</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>p-org/P</td>
+                                    <td>master</td>
+                                    <td>C#</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>postcss/postcss-loader</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>prest/prest</td>
+                                    <td>main</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>pymc-devs/pymc</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>searchkit/searchkit</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>srvrco/getssl</td>
+                                    <td>master</td>
+                                    <td>Shell</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>websocket-client/websocket-client</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>yahoo/react-stickynode</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>vuejs/vue</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>twbs/bootstrap</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>ohmyzsh/ohmyzsh</td>
+                                    <td>master</td>
+                                    <td>Shell</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>flutter/flutter</td>
+                                    <td>master</td>
+                                    <td>Dart</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>ytdl-org/youtube-dl</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>huggingface/transformers</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>denoland/deno</td>
+                                    <td>main</td>
+                                    <td>Rust</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>ant-design/ant-design</td>
+                                    <td>master</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>puppeteer/puppeteer</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>AUTOMATIC1111/stable-diffusion-webui</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>django/django</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>gin-gonic/gin</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>tailwindlabs/tailwindcss</td>
+                                    <td>master</td>
+                                    <td>HTML</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>sveltejs/svelte</td>
+                                    <td>master</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>gohugoio/hugo</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>moby/moby</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>netdata/netdata</td>
+                                    <td>master</td>
+                                    <td>C</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>pallets/flask</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>expressjs/express</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>chartjs/Chart.js</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>coder/code-server</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>reduxjs/redux</td>
+                                    <td>master</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>tiangolo/fastapi</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>vitejs/vite</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>anuraghazra/github-readme-stats</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>h5bp/html5-boilerplate</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>strapi/strapi</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>junegunn/fzf</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>syncthing/syncthing</td>
+                                    <td>main</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>apache/superset</td>
+                                    <td>master</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>microsoft/playwright</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>hoppscotch/hoppscotch</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>remix-run/react-router</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>prometheus/prometheus</td>
+                                    <td>main</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>yt-dlp/yt-dlp</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>obsproject/obs-studio</td>
+                                    <td>master</td>
+                                    <td>C</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>google/guava</td>
+                                    <td>master</td>
+                                    <td>Java</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>caddyserver/caddy</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>scrapy/scrapy</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>jekyll/jekyll</td>
+                                    <td>master</td>
+                                    <td>Ruby</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>git/git</td>
+                                    <td>master</td>
+                                    <td>C</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>prettier/prettier</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>facebook/docusaurus</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>serverless/serverless</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>square/okhttp</td>
+                                    <td>master</td>
+                                    <td>Kotlin</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>etcd-io/etcd</td>
+                                    <td>main</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>TryGhost/Ghost</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>traefik/traefik</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>mozilla/pdf.js</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>gogs/gogs</td>
+                                    <td>main</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>hwchase17/langchain</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>rustdesk/rustdesk</td>
+                                    <td>master</td>
+                                    <td>Rust</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>jestjs/jest</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>square/retrofit</td>
+                                    <td>master</td>
+                                    <td>Java</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>oven-sh/bun</td>
+                                    <td>main</td>
+                                    <td>Zig</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>sharkdp/bat</td>
+                                    <td>master</td>
+                                    <td>Rust</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>sherlock-project/sherlock</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>styled-components/styled-components</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>ultralytics/yolov5</td>
+                                    <td>master</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>rclone/rclone</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>pandas-dev/pandas</td>
+                                    <td>main</td>
+                                    <td>Python</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>agalwood/Motrix</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>BurntSushi/ripgrep</td>
+                                    <td>master</td>
+                                    <td>Rust</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>vuejs/core</td>
+                                    <td>main</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>Leaflet/Leaflet</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>google/zx</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>hashicorp/terraform</td>
+                                    <td>main</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>vuetifyjs/vuetify</td>
+                                    <td>master</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>streamich/react-use</td>
+                                    <td>master</td>
+                                    <td>TypeScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>hexojs/hexo</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>Homebrew/brew</td>
+                                    <td>master</td>
+                                    <td>Ruby</td>
+                                    </tr>
+                                    <tr>
+                                    <td>ML</td>
+                                    <td>apache/spark</td>
+                                    <td>master</td>
+                                    <td>Scala</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>videojs/video.js</td>
+                                    <td>main</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>nolimits4web/swiper</td>
+                                    <td>master</td>
+                                    <td>JavaScript</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>jesseduffield/lazygit</td>
+                                    <td>master</td>
+                                    <td>Go</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>topjohnwu/Magisk</td>
+                                    <td>master</td>
+                                    <td>C++</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>AppFlowy-IO/AppFlowy</td>
+                                    <td>main</td>
+                                    <td>Rust</td>
+                                    </tr>
+                                    <tr>
+                                    <td>No ML</td>
+                                    <td>Kong/kong</td>
+                                    <td>master</td>
+                                    <td>Lua</td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+
+
+
+                            </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
+    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="js/csv_to_html_table.js"></script>
+
+
+    <script type="text/javascript">
+      function format_name(name){
+        if (name.length > 15)
+            return "<font size='2'>" + name.substring(0, name.indexOf("/")+1) + "<br>" + name.substring(name.indexOf("/")+1, name.le) + "</font>";
+        if (name.length > 10)
+          return "<font size='2'>" + name + "</font>";
+        else
+          return name;
+      };
+
+    function LoadOnce(){ 
+        window.location.reload(); 
+    };
+
+   
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {  
+          var modals = ['#studied-projects', '#rq1-mww-test-and-cliff-delta-results',
+                        '#rq2-mww-test-and-cliff-delta-results', '#rq3-r-squared-and-optimism', 
+                        '#rq3-variables-explanatory-power'];
+          if (window.location.hash && ~modals.indexOf(window.location.hash)) {
+             $(window.location.hash).modal();
+          }
+        });
+
+      window.onload = function() {
+        $('.datatable').DataTable({"pageLength": 25});
+
+        $('.datatable-10').DataTable({"pageLength": 10});
+      };        
+    </script>    
+
+</body>
+
 </html>
