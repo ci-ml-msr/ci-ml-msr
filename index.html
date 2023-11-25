@@ -144,13 +144,13 @@
                     <br>
                     <br>
                      ML projects tend to require a longer build duration. In addition, medium-sized ML projects tend to have a lower test coverage.
-                    <!-- <br><br> -->
+                    <br><br>
                     </p>
-                    <!-- <p class="text-center">
-                        <a href="#rq1-mww-test-and-cliff-delta-results" class="btn btn-success portfolio-link" data-toggle="modal">
-                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ1: See Mann-Whitney-Wilcoxon test result and Cliff's delta values</b>
+                    <p class="text-center">
+                        <a href="#rq1-results" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>See RQ1 results' details</b>
                         </a>
-                    </p> -->
+                    </p>
                     <p class="text-justify">
                     <br>
                     <b>RQ2. What are the evolution trends of build duration and test coverage within ML and Non-ML projects?</b>
@@ -158,24 +158,26 @@
                     <br>
                     Small and medium-sized ML projects manifest higher increasing build duration trends (75% and 61.4%) compared to non-ML projects (35.7% and 44.7%). Furthermore, both ML and non-ML projects manifest a maintaining test coverage trend, even with 46% of the medium ML projects exhibiting a median coverage rate below 75%.
                     <br><br>
+                    </p>
+                    <p class="text-center">
+                        <a href="#rq2-results" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>See RQ2 results' details</b>
+                        </a>
+                    </p>
                                         
                     <p class="text-justify">
                     
                     <b>RQ3. What do ML and non-ML developers discuss about CI in their projects?</b>
                     <br><br>
                     Both ML and non-ML projects share common discussions on CI Build Execution and Status, CI Infrastructure, CI Pipeline Configuration, and CI Testing and Code Quality. However, ML projects exhibit a more extensive range of CI-related themes (74 themes) compared to non-ML projects (24 themes). Notably, a significant difference arises in the prevalence of the "relatedness of failures" theme in ML project discussions, indicating a potential higher incidence of false positives in their CI systems.
-                    <br><br>
-                    <!-- <p class="text-center">
-                        <a href="#rq3-r-squared-and-optimism" class="btn btn-success portfolio-link" data-toggle="modal">
-                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ3: R² and R² optimism</b>
-                        </a>
-                    </p> -->
-                    <!-- <br>
+                    <br><br>                    
+                    </p>
                     <p class="text-center">
-                        <a href="#rq3-variables-explanatory-power" class="btn btn-success portfolio-link" data-toggle="modal">
-                            <i class="fa fa-search-plus fa-1x"></i> <b>RQ3: Explanatory Power of the models' variables (Before and After CI)</b>
+                        <a href="#rq3-results" class="btn btn-success portfolio-link" data-toggle="modal">
+                            <i class="fa fa-search-plus fa-1x"></i> <b>See RQ3 results' details</b>
                         </a>
-                    </p> -->
+                    </p>
+
                     <p class="text-justify">
                     </p>                     
                     </p>                    
@@ -230,6 +232,218 @@
             </div>
         </div>        
     </footer>
+
+
+    <!-- Modals -->
+    <div id="rq1-results" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            
+                            <h3>RQ1 RESULTS</h3>
+                            <hr class="star-primary">
+
+                            <p>The figures below show the Boxplots of the distrubutions and the statistical comparisons of the CI metrics "buil duration", "test coverage", "time to fix broken builds", and "commits activity" between ML and non-ML projects.</p>
+
+                            <br><br>
+                                                        
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq1/build-duration-boxplot.png" alt="...">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 1. Build Duration per project category and size.</p>
+
+
+                            <br><br>
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq1/test-coverage-boxplot.png" alt="...">
+                            <!-- Portfolio Modal - Text-->                            
+                            <p class="mb-4">Figure 2. Test Coverage per project category and size.</p>
+
+                            <br><br>
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq1/commit-activity-boxplot.png" alt="...">
+                            <!-- Portfolio Modal - Text-->                            
+                            <p class="mb-4">Figure 3. Commit Activity per project category and size.</p>
+
+
+                            <br><br>
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq1/time-to-fix-boxplot.png" alt="...">
+                            <!-- Portfolio Modal - Text-->                            
+                            <p class="mb-4">Figure 4. Time to Fix Broken Builds per project category and size.</p>
+                                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="rq2-results" class="portfolio-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                      
+                            <h3>RQ2 RESULTS</h3>
+                            <hr class="star-primary">
+                            <p>The figures below show the time series clusters and their trends for the build duration and test coverage metrics on ML and non-ML projects.</p>
+
+                            <br><br>
+
+                            <br>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-build-duration-ts-clustering-ml.png" alt="..." width="100%">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 5. Build Duration Clustering Trends’ Patterns in ML Projects.</p>                            
+
+                            <br><br>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-build-duration-ts-clustering-non-ml.png" alt="..."
+                            width="100%">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 6. Build Duration Clustering Trends’ Patterns in non- 771 772 ML Projects.</p>                                                                      
+                            <br><br>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-build-duration-trends-proportion-category-size.png" alt="..." width="100%">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 7. Clustering trends of "Build Duration" time series per project category and size.</p>                            
+
+                            <br><br>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-coverage-ts-clustering-ml.png" alt="..." width="100%">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 8. Test Coverage Clustering Trends’ Patterns in ML Projects.</p>
+
+
+                            <br><br>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-coverage-ts-clustering-non-ml.png" alt="..." width="100%">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 9. Test Coverage Clustering Trends’ Patterns in non-ML Projects.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="rq3-results" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+
+                            <h3>RQ3 RESULTS</h3>
+                            <hr class="star-primary">
+                            <p>Figures 10 and 11 present the CI discussions (i.e., the themes) that emerged from our document analysis. </p>
+
+                            <br><br>
+
+                            <br>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq3/ml-codes-quali.png" alt="..." width="100%">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 10. CI-related themes discussed in ML projects.</p>                            
+
+                            <br><br>
+                            <!-- Portfolio Modal - Image-->
+                            <img class="img-fluid rounded mb-5" src="images/plots/rq3/no-ml-codes-quali.png" alt="..."
+                            width="100%">
+                            <!-- Portfolio Modal - Text-->
+                            <p class="mb-4">Figure 11. CI-related themes discussed in non-ML projects.</p>                            
+                      
+                        
+                            <br><br>
+
+                            <p>The table below presents the description of the general themes related to CI discussions that we found in the context of ML and non-ML projects.
+                            </p>
+
+                            <br><br>
+
+                            <table class="table table-striped table-condensed" id="">                                
+                                <thead><tr><th title="Field #1">theme</th>
+                                <th title="Field #2">description</th>
+                                <th title="Field #3">context</th>
+                                </tr></thead>
+                                <tbody><tr>
+                                <td>CI Build Execution and Status</td>
+                                <td>Discussions about managing and monitoring the execution and status of CI builds.</td>
+                                <td>non-ML/ML</td>
+                                </tr>
+                                <tr>
+                                <td>CI Infrastructure</td>
+                                <td>Discussions about the underlying infrastructure supporting CI processes.</td>
+                                <td>non-ML/ML</td>
+                                </tr>
+                                <tr>
+                                <td>CI Pipeline Configuration</td>
+                                <td>Discussions about configuration, structure, and optimization of the CI pipeline.</td>
+                                <td>non-ML/ML</td>
+                                </tr>
+                                <tr>
+                                <td>CI Testing and Code Quality</td>
+                                <td>Discussions about aspects related to testing practices and code quality within the context of CI.</td>
+                                <td>non-ML/ML</td>
+                                </tr>
+                                <tr>
+                                <td>CI on Software Development Process</td>
+                                <td>Discussions about the usage and impact of CI within the software development process.</td>
+                                <td>ML</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="portfolio-modal modal fade" id="2studied-projects" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                      
+                        
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Modals -->
@@ -1379,6 +1593,37 @@
         </div>
     </div>
 
+
+    <!-- Modals -->
+    <div class="portfolio-modal modal fade" id="rq3-themes-desc" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h3>Projects Information</h3>
+                            <hr class="star-primary">
+                            <p>The table below shows the full name of each project of our database and general informations regarding project.</p>
+                            <div id='projects-information'>
+                                
+
+
+
+                            </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
 
@@ -1420,9 +1665,9 @@
 
     <script type="text/javascript">
         $(document).ready(function() {  
-          var modals = ['#studied-projects', '#rq1-mww-test-and-cliff-delta-results',
-                        '#rq2-mww-test-and-cliff-delta-results', '#rq3-r-squared-and-optimism', 
-                        '#rq3-variables-explanatory-power'];
+          var modals = ['#studied-projects', '#rq1-results',
+                        '#rq2-results',
+                        '#rq3-results'];
           if (window.location.hash && ~modals.indexOf(window.location.hash)) {
              $(window.location.hash).modal();
           }
