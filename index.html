@@ -83,12 +83,36 @@
                         <hr class="star-light">
                     </div>
                 </div>                
-            </div>            
-            <div class="row">                
+            </div>    
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="col-md- col-lg-3" align="center">
+                        <p><b>João Helis Bernardo</b><br>
+                        IFRN, UFRN, Brazil</p><br>
+                    </div>
+                    <div class="col-md-6 col-lg-3" align="center">
+                      <p><b>Daniel Alencar da Costa</b><br>
+                        Univeristy of Otago<br>New Zealand</p><br>                            
+                    </div>
+                    <div class="col-md-6 col-lg-3" align="center">
+                      <p><b>Sérgio Medeiros</b><br>
+                        UFRN, Brazil</p><br>                            
+                    </div>
+                    <div class="col-md-6 col-lg-3" align="center">
+                      <p><b>Uirá Kulesza</b><br>
+                        UFRN, Brazil</p><br>
+                    </div>        
+                    </div>                    
+                </div>
+            <br>        
+            <!-- <div class="row">                
                 <div class="col-lg-12">
                 <br>
                 </div>                          
-            </div>
+            </div> -->
             
         </div>
     </header>    
@@ -97,6 +121,9 @@
     <section id="about">
        
         <div class="container">
+
+            
+
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>PAPER SUMMARY</h2>
@@ -114,12 +141,20 @@
                     <br><br>
                     </p>
                     <p style="padding-left:40px;padding-right:40px;">
-                    <b>RQ1:</b>  To what extent do CI sub-practices adoption differ between ML and non-ML projects?                 
+                    <b>RQ1:  To what extent do CI sub-practices adoption differ between ML and non-ML projects?</b>                 
+                    <br><br>               
+                    <b>Motivation.</b> Adopting CI is beyond the sole implementation of a CI service, requiring effective use of recommended CI practices. 
+                    As such, the intricate nature of ML, involving complex algorithms and data, might present unique challenges in adopting CI practices effectively. For example, it might be harder to maintain shorter build duration in ML projects because they require more complex tests.
+                    Given the significant knowledge gap regarding the specific application of CI practices within ML projects, we start our investigations by comparing CI metrics from ML and non-ML projects.
+                    <br><br>   
+                    <b>RQ2: What are the evolution trends of build duration and test coverage within ML and Non-ML projects?</b>
+                    <br><br>
+                    <b>Motivation.</b> The results of RQ1 show that ML projects tend to require longer build duration compared to non-ML projects and have less test coverage in the case of medium-sized projects. 
+                    As such, in RQ2, we analyze how the build duration and test coverage of ML and non-ML projects evolve over time. This analysis allows us to understand better the specificities of the differences observed in RQ1. For example, do ML projects have an increasing trend of longer build duration? Or has it always been the case since the beginning of the ML projects?                  
                     <br><br>                    
-                    <b>RQ2:</b> What are the evolution trends of build duration and test coverage within ML and Non-ML projects?
-                  
-                    <br><br>                    
-                    <b>RQ3.</b> What do ML and non-ML developers discuss about CI in their projects?
+                    <b>RQ3. What do ML and non-ML developers discuss about CI in their projects?</b>
+                    <br><br>
+                    <b>Motivation.</b> Considering the notable differences observed between ML and non-ML projects concerning CI in RQ1 and RQ2, we delve deeper in RQ3 to better understand the discussions about CI in both ML and non-ML projects. Our goal is to investigate whether ML and non-ML projects differ in their discussions concerning the use of CI. For instance, ML projects may discuss more build issues, as we observed that they typically require a longer build duration (see RQ1).
                     </p>                                                                                                                        
                 </div>                                                
             </div>
@@ -143,40 +178,189 @@
                     <b>RQ1. To what extent do CI sub-practices adoption differ between ML and non-ML projects?</b>
                     <br>
                     <br>
-                     ML projects tend to require a longer build duration. In addition, medium-sized ML projects tend to have a lower test coverage.
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>RESULT SUMMARY</b></div>
+                        <div class="panel-body" style="font-size: 1.5em;">
+                            ML projects tend to require a longer build duration. In addition, medium-sized ML projects tend to have a lower test coverage.
+                        </div>
+                    </div>    
+                     
                     <br><br>
                     </p>
-                    <p class="text-center">
+                    
+                    <!-- <p class="text-center">
                         <a href="#rq1-results" class="btn btn-success portfolio-link" data-toggle="modal">
                             <i class="fa fa-search-plus fa-1x"></i> <b>See RQ1 results' details</b>
                         </a>
-                    </p>
+                    </p> -->
+
+                    <h3>RQ1 RESULTS' DETAILS</h3>
+                    <hr class="star-primary">
+
+                    <p>The figures below show the Boxplots of the distrubutions and the statistical comparisons of the CI metrics "buil duration", "test coverage", "time to fix broken builds", and "commits activity" between ML and non-ML projects.</p>
+
+                    <br><br>
+                                                
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq1/build-duration-boxplot.png" alt="...">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 1. Build Duration per project category and size.</p>
+
+
+                    <br><br>
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq1/test-coverage-boxplot.png" alt="...">
+                    <!-- Portfolio Modal - Text-->                            
+                    <p class="mb-4">Figure 2. Test Coverage per project category and size.</p>
+
+                    <br><br>
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq1/commit-activity-boxplot.png" alt="...">
+                    <!-- Portfolio Modal - Text-->                            
+                    <p class="mb-4">Figure 3. Commit Activity per project category and size.</p>
+
+
+                    <br><br>
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq1/time-to-fix-boxplot.png" alt="...">
+                    <!-- Portfolio Modal - Text-->                            
+                    <p class="mb-4">Figure 4. Time to Fix Broken Builds per project category and size.</p>
+
+
                     <p class="text-justify">
+                    <br>
                     <br>
                     <b>RQ2. What are the evolution trends of build duration and test coverage within ML and Non-ML projects?</b>
                     <br>
                     <br>
-                    Small and medium-sized ML projects manifest higher increasing build duration trends (75% and 61.4%) compared to non-ML projects (35.7% and 44.7%). Furthermore, both ML and non-ML projects manifest a maintaining test coverage trend, even with 46% of the medium ML projects exhibiting a median coverage rate below 75%.
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>RESULT SUMMARY</b></div>
+                        <div class="panel-body" style="font-size: 1.5em;">
+                            Small and medium-sized ML projects manifest higher increasing build duration trends (75% and 61.4%) compared to non-ML projects (35.7% and 44.7%). Furthermore, both ML and non-ML projects manifest a maintaining test coverage trend, even with 46% of the medium ML projects exhibiting a median coverage rate below 75%.
+                        </div>
+                    </div>                        
                     <br><br>
                     </p>
-                    <p class="text-center">
+                    <!-- <p class="text-center">
                         <a href="#rq2-results" class="btn btn-success portfolio-link" data-toggle="modal">
                             <i class="fa fa-search-plus fa-1x"></i> <b>See RQ2 results' details</b>
                         </a>
-                    </p>
+                    </p> -->
+
+                    <h3>RQ2 RESULTS' DETAILS</h3>
+                    <hr class="star-primary">
+                    <p>The figures below show the time series clusters and their trends for the build duration and test coverage metrics on ML and non-ML projects.</p>
+
+                    <br><br>
+
+                    <br>
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-build-duration-ts-clustering-ml.png" alt="...">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 5. Build Duration Clustering Trends’ Patterns in ML Projects.</p>                            
+
+                    <br><br>
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-build-duration-ts-clustering-non-ml.png" alt="..." width="88%">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 6. Build Duration Clustering Trends’ Patterns in non- 771 772 ML Projects.</p>                                                                      
+                    <br><br>
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-build-duration-trends-proportion-category-size.png" alt="...">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 7. Clustering trends of "Build Duration" time series per project category and size.</p>                            
+
+                    <br><br>
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-coverage-ts-clustering-ml.png" alt="...">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 8. Test Coverage Clustering Trends’ Patterns in ML Projects.</p>
+
+
+                    <br><br>
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq2/rq2-coverage-ts-clustering-non-ml.png" alt="...">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 9. Test Coverage Clustering Trends’ Patterns in non-ML Projects.</p>
                                         
                     <p class="text-justify">
-                    
+                    <br>
+                    <br>
+
+
                     <b>RQ3. What do ML and non-ML developers discuss about CI in their projects?</b>
                     <br><br>
-                    Both ML and non-ML projects share common discussions on CI Build Execution and Status, CI Infrastructure, CI Pipeline Configuration, and CI Testing and Code Quality. However, ML projects exhibit a more extensive range of CI-related themes (74 themes) compared to non-ML projects (24 themes). Notably, a significant difference arises in the prevalence of the "relatedness of failures" theme in ML project discussions, indicating a potential higher incidence of false positives in their CI systems.
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><b>RESULT SUMMARY</b></div>
+                        <div class="panel-body" style="font-size: 1.5em;">
+                            Both ML and non-ML projects share common discussions on CI Build Execution and Status, CI Infrastructure, CI Pipeline Configuration, and CI Testing and Code Quality. However, ML projects exhibit a more extensive range of CI-related themes (74 themes) compared to non-ML projects (24 themes). Notably, a significant difference arises in the prevalence of the "relatedness of failures" theme in ML project discussions, indicating a potential higher incidence of false positives in their CI systems.
+                        </div>
+                    </div>                      
                     <br><br>                    
                     </p>
-                    <p class="text-center">
+                    
+                    <!-- <p class="text-center">
                         <a href="#rq3-results" class="btn btn-success portfolio-link" data-toggle="modal">
                             <i class="fa fa-search-plus fa-1x"></i> <b>See RQ3 results' details</b>
                         </a>
+                    </p> -->
+
+                    <h3>RQ3 RESULTS' DETAILS</h3>
+                    <hr class="star-primary">
+                    <p>Figures 10 and 11 present the CI discussions (i.e., the themes) that emerged from our document analysis. </p>
+
+                    <br><br>
+
+                    <br>
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq3/ml-codes-quali.png" alt="..." width="100%">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 10. CI-related themes discussed in ML projects.</p>                            
+
+                    <br><br>
+                    <!-- Portfolio Modal - Image-->
+                    <img class="img-fluid rounded mb-5" src="images/plots/rq3/no-ml-codes-quali.png" alt="..."
+                    width="60%">
+                    <!-- Portfolio Modal - Text-->
+                    <p class="mb-4">Figure 11. CI-related themes discussed in non-ML projects.</p>                            
+              
+                
+                    <br><br>
+
+                    <p>The table below presents the description of the general themes related to CI discussions that we found in the context of ML and non-ML projects.
                     </p>
+
+                    <br><br>
+
+                    <table class="table table-striped table-condensed" id="">                                
+                        <thead><tr><th title="Field #1">theme</th>
+                        <th title="Field #2">description</th>
+                        <th title="Field #3">context</th>
+                        </tr></thead>
+                        <tbody><tr>
+                        <td>CI Build Execution and Status</td>
+                        <td>Discussions about managing and monitoring the execution and status of CI builds.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI Infrastructure</td>
+                        <td>Discussions about the underlying infrastructure supporting CI processes.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI Pipeline Configuration</td>
+                        <td>Discussions about configuration, structure, and optimization of the CI pipeline.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI Testing and Code Quality</td>
+                        <td>Discussions about aspects related to testing practices and code quality within the context of CI.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI on Software Development Process</td>
+                        <td>Discussions about the usage and impact of CI within the software development process.</td>
+                        <td>ML</td>
+                        </tr>
+                        </tbody>
+                    </table>
 
                     <p class="text-justify">
                     </p>                     
@@ -201,18 +385,22 @@
                     </p>
                     <br>                    
                     <br>
+                    <p>
+                        The code we used to retrieve data for the <b><a href="#studied-projects" data-toggle="modal">185 studied projects</a></b> is available in the following GitHub repository: <a href="https://github.com/joaohelis/ml-ci-project-miner" class="portfolio-link" target="_blank">https://github.com/joaohelis/ml-ci-project-miner</a>.                        
+
+                    </p>
                 </div>                
 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <br>
                     <p>
-                    Use the link below to <b>download the reproduction package</b>.
+                    Use the link below to <b>download the reproduction package on Zenodo</b>.
                     </p>                    
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">                  
 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="data/reproduction-package.zip" class="btn btn-success">
+                    <a href="https://zenodo.org/" class="btn btn-success" target="_blank">
                         <i class="glyphicon glyphicon-download"></i> <b>Download the reproduction package</b>
                     </a>
                 </div>                                
