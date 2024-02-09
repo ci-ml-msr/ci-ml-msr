@@ -141,13 +141,13 @@
                     <br><br>
                     </p>
                     <p style="padding-left:40px;padding-right:40px;">
-                    <b>RQ1:  To what extent do CI sub-practices adoption differ between ML and non-ML projects?</b>                 
+                    <b>RQ1:  To what extent do CI practices adoption differ between ML and non-ML projects?</b>                 
                     <br><br>               
                     <b>Motivation.</b> Adopting CI is beyond the sole implementation of a CI service, requiring effective use of recommended CI practices. 
                     As such, the intricate nature of ML, involving complex algorithms and data, might present unique challenges in adopting CI practices effectively. For example, it might be harder to maintain shorter build duration in ML projects because they require more complex tests.
                     Given the significant knowledge gap regarding the specific application of CI practices within ML projects, we start our investigations by comparing CI metrics from ML and non-ML projects.
                     <br><br>   
-                    <b>RQ2: What are the evolution trends of build duration and test coverage within ML and Non-ML projects?</b>
+                    <b>RQ2: What are the evolution trends of build duration and test coverage within ML and non-ML projects?</b>
                     <br><br>
                     <b>Motivation.</b> The results of RQ1 show that ML projects tend to require longer build duration compared to non-ML projects and have less test coverage in the case of medium-sized projects. 
                     As such, in RQ2, we analyze how the build duration and test coverage of ML and non-ML projects evolve over time. This analysis allows us to understand better the specificities of the differences observed in RQ1. For example, do ML projects have an increasing trend of longer build duration? Or has it always been the case since the beginning of the ML projects?                  
@@ -161,7 +161,7 @@
         </div>
     </section>
 
-	<!-- Portfolio Grid Section -->
+    <!-- Portfolio Grid Section -->
     <section id="results">
         <div class="container">
             <div class="row">
@@ -171,11 +171,11 @@
                 </div>
             </div>
             <div class="row">
-            	<div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
                     <p>Here we present the results for each RQ that we address.
                     <br><br>
                     <p class="text-justify">
-                    <b>RQ1. To what extent do CI sub-practices adoption differ between ML and non-ML projects?</b>
+                    <b>RQ1. To what extent do CI practices adoption differ between ML and non-ML projects?</b>
                     <br>
                     <br>
                     <div class="panel panel-default">
@@ -232,7 +232,7 @@
                     <p class="text-justify">
                     <br>
                     <br>
-                    <b>RQ2. What are the evolution trends of build duration and test coverage within ML and Non-ML projects?</b>
+                    <b>RQ2. What are the evolution trends of build duration and test coverage within ML and non-ML projects?</b>
                     <br>
                     <br>
                     <div class="panel panel-default">
@@ -329,15 +329,15 @@
                 
                     <br><br>
 
-                    <p>The table below presents the description of the general themes related to CI discussions that we found in the context of ML and non-ML projects.
+                    <p>Table 1 presents the description of the general themes related to CI discussions that we found in the context of ML and non-ML projects.
                     </p>
 
                     <br><br>
 
                     <table class="table table-striped table-condensed" id="">                                
-                        <thead><tr><th title="Field #1">theme</th>
-                        <th title="Field #2">description</th>
-                        <th title="Field #3">context</th>
+                        <thead><tr><th class="text-center" title="Field #1">theme</th>
+                        <th class="text-center" title="Field #2">description</th>
+                        <th class="text-center" title="Field #3">context</th>
                         </tr></thead>
                         <tbody><tr>
                         <td>CI Build Execution and Status</td>
@@ -366,6 +366,413 @@
                         </tr>
                         </tbody>
                     </table>
+                    <p class="mb-4">Table 1. General themes related to CI discussions in ML and non-ML projects.</p>                    
+                    <br><br>
+
+                    <p>Table 2 presents the description of codes related to CI discussions that we found in the context of ML and non-ML projects.
+                    </p>
+
+                    <br><br>
+
+
+                    <table class="table table-striped table-condensed" id="themes-description">
+                        <thead><tr><th class="text-center" title="Field #1">code</th>
+                        <th class="text-center" title="Field #2">description</th>
+                        <th class="text-center" title="Field #3">context</th>
+                        </tr></thead>
+                        <tbody><tr>
+                        <td>CI status tracking</td>
+                        <td>Tracking the status of CI builds.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI debugging</td>
+                        <td>Identifying and resolving issues or bugs in the CI process.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>relatedness of failures</td>
+                        <td>Identifying that the build failure is not related to the proposed code change.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI triggering</td>
+                        <td>Methods and events that trigger the initiation of CI builds.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI configuration</td>
+                        <td>Discussing the configurations of the parameters and settings for CI processes.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>fix broken CI</td>
+                        <td>Addressing issues that cause the CI breakage.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI local reproduction</td>
+                        <td>Recreating or investigating CI failures on a local development environment.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>test addition</td>
+                        <td>Discussing the addition of new tests to the CI test suite.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>dependency management</td>
+                        <td>Managing dependencies and ensuring they are correctly handled in the CI pipeline.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI as decision-making</td>
+                        <td>Discussing the usage of CI results as a basis for decision-making in the development process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI build duration</td>
+                        <td>Discussing the the time taken for CI builds to be completed.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI rebase</td>
+                        <td>Handling code rebasing within the context of CI.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>linting</td>
+                        <td>Discussing code style and quality through linting tools in the CI process.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>test coverage</td>
+                        <td>Discussing test coverage in the CI test suite.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI flakiness</td>
+                        <td>Dealing with flaky or inconsistent behavior in CI builds.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI clarification</td>
+                        <td>Providing clarifications and additional information related to CI processes.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI regression</td>
+                        <td>Managing regressions in the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test setup</td>
+                        <td>Discussing the configuration of the environment for running tests in the CI process.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI channel</td>
+                        <td>Discussions related to installations and configuration of CI systems.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test refactoring</td>
+                        <td>Restructuring or improving tests in the CI test suite.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test requirements</td>
+                        <td>Managing the requirements for tests in the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>(mis)trust in CI</td>
+                        <td>Mistrust in the results produced by CI builds.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI explanation</td>
+                        <td>Providing explanations for CI-related processes and decisions.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI infrastructure</td>
+                        <td>Discussing the infrastructure supporting CI.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI as facilitator</td>
+                        <td>Captures conversations centered on streamlining CI processes by integrating external tools or services effectively.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI as quality-gate</td>
+                        <td>Treating CI as a quality gate to ensure high standards in code.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI backporting</td>
+                        <td>Backporting changes or fixes identified in the CI process to previous versions.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI caching</td>
+                        <td>Managing caching strategies to improve CI build performance.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI load</td>
+                        <td>Managing the load on CI infrastructure and resources.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI merge conflicts</td>
+                        <td>Discussing merge conflicts during the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI static analysis</td>
+                        <td>Using static analysis tools to assess code quality in the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>skipping CI</td>
+                        <td>Discussing conditions under which CI builds can be skipped or ignored.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>test instructions</td>
+                        <td>Providing instructions for running tests in the CI environment.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test update</td>
+                        <td>Discussing test update in the CI test suite.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>backwards compatibility</td>
+                        <td>Managing backward compatibility of code changes in the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI build frequency</td>
+                        <td>Discussing the frequency of continuous integration builds.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI correctness</td>
+                        <td>Assessing the correctness of CI build results.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI double-check</td>
+                        <td>Discussing additional checks in the CI build results.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI permissions</td>
+                        <td>Discussing permissions to CI workflows management.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI policy</td>
+                        <td>Establishing policies governing the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI security</td>
+                        <td>Discussing security concerns in the context of CI.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI testability</td>
+                        <td>Discussing how easily testable code changes are in the CI environment.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>integration delay</td>
+                        <td>Discussing the influence of CI on the time reviewers take to integrate code changes in the mainstream.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>multiple jobs</td>
+                        <td>Managing multiple jobs within the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>pipeline setting</td>
+                        <td>Configuring settings for the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test fixture</td>
+                        <td>Setting up fixtures for tests in the CI testing suite.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test guidance</td>
+                        <td>Providing guidance for writing tests in CI.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test readability</td>
+                        <td>Discussing the readability and clarity of test cases in the CI testing suite.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>build system prototype</td>
+                        <td>Discussing the development of prototypes for the build system in CI.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI build complexity</td>
+                        <td>Discussing the complexity in the CI build process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI build size</td>
+                        <td>Discussing the size of the CI build process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI credits</td>
+                        <td>Discussing the usage of CI credits to execute the CI workflow within the CI service.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI effectiveness</td>
+                        <td>Discussing and evaluating the overall effectiveness of the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI stability</td>
+                        <td>Discussing stability and reliability in the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI steps</td>
+                        <td>Defining and organizing the steps in the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>ease of installation</td>
+                        <td>Discussing the ease of installation and setup of the CI environment.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>lack of tests</td>
+                        <td>Discussing the lack of tests in the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>learning CI</td>
+                        <td>Discussing how the CI workflow steps work.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>memory management</td>
+                        <td>Discussing memory usage in the context of CI builds.</td>
+                        <td>non-ML/ML</td>
+                        </tr>
+                        <tr>
+                        <td>model training jobs</td>
+                        <td>Managing jobs related to training machine learning models in the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>multi-pipelines</td>
+                        <td>Discussing the coordination of multiple pipelines within the CI system.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>repository tagging</td>
+                        <td>Discussing the management of version tagging in the repository within CI.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>review delay frustration with green CI</td>
+                        <td>Dealing with frustration related to delays in code reviews despite a green CI.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>scheduled build</td>
+                        <td>Discussing the scheduling of builds in the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test discrepancies</td>
+                        <td>Discussing discrepancies and inconsistencies in test results within the CI test suite.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test freeze</td>
+                        <td>Managing and dealing with test freezes in the CI test suite.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test interaction</td>
+                        <td>Handling interactions and dependencies between tests in the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test issues</td>
+                        <td>Discussing issues related to tests in the CI suite.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test parametrization</td>
+                        <td>Discussing configuration and managing parameters for tests in the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>test removal</td>
+                        <td>Removing and managing tests in the CI suite.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>testing purposes</td>
+                        <td>Discussing the purpose and goals of testing within the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>testing scope</td>
+                        <td>Discussing the scope of testing within the CI pipeline.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>workflow permissions</td>
+                        <td>Managing permissions and access control within the workflow of the CI process.</td>
+                        <td>ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI is stuck</td>
+                        <td>Discussion issues where the CI process is stuck.</td>
+                        <td>non-ML</td>
+                        </tr>
+                        <tr>
+                        <td>test structure</td>
+                        <td>Organizing and structuring the test suite for better clarity and maintenance.</td>
+                        <td>non-ML</td>
+                        </tr>
+                        <tr>
+                        <td>CI service churn</td>
+                        <td>Discussing the churn of the CI services being used.</td>
+                        <td>non-ML</td>
+                        </tr>
+                        <tr>
+                        <td>test guidelines</td>
+                        <td>Discussing about guidelines for writing tests in the CI pipeline.</td>
+                        <td>non-ML</td>
+                        </tr>
+                        <tr>
+                        <td>test size</td>
+                        <td>Discussing the test size within the CI test suite.</td>
+                        <td>non-ML</td>
+                        </tr>
+                        </tbody>
+                    </table>    
+                    <p class="mb-4">Table 2. Description of codes related to CI discussions in ML and non-ML projects.</p>
 
                     <p class="text-justify">
                     </p>                     
@@ -405,7 +812,7 @@
                 <div class="col-lg-8 col-lg-offset-2">                  
 
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="https://zenodo.org/" class="btn btn-success" target="_blank">
+                    <a href="https://zenodo.org/records/10637336" class="btn btn-success" target="_blank">
                         <i class="glyphicon glyphicon-download"></i> <b>Download the reproduction package</b>
                     </a>
                 </div>                                
@@ -609,414 +1016,7 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <p class="mb-4">Table 1. General themes related to CI discussions in ML and non-ML projects.</p>
-                            
-
-                            <br><br>
-
-                            <p>The table below presents the description of themes related to CI discussions that we found in the context of ML and non-ML projects.
-                            </p>
-
-                            <br><br>
-
-
-                            <table class="table table-striped table-condensed" id="themes-description">
-                                <thead><tr><th title="Field #1">theme</th>
-                                <th title="Field #2">description</th>
-                                <th title="Field #3">context</th>
-                                </tr></thead>
-                                <tbody><tr>
-                                <td>CI status tracking</td>
-                                <td>Tracking the status of CI builds.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI debugging</td>
-                                <td>Identifying and resolving issues or bugs in the CI process.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>relatedness of failures</td>
-                                <td>Identifying that the build failure is not related to the proposed code change.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI triggering</td>
-                                <td>Methods and events that trigger the initiation of CI builds.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI configuration</td>
-                                <td>Discussing the configurations of the parameters and settings for CI processes.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>fix broken CI</td>
-                                <td>Addressing issues that cause the CI breakage.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI local reproduction</td>
-                                <td>Recreating or investigating CI failures on a local development environment.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>test addition</td>
-                                <td>Discussing the addition of new tests to the CI test suite.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>dependency management</td>
-                                <td>Managing dependencies and ensuring they are correctly handled in the CI pipeline.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI as decision-making</td>
-                                <td>Discussing the usage of CI results as a basis for decision-making in the development process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI build duration</td>
-                                <td>Discussing the the time taken for CI builds to be completed.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI rebase</td>
-                                <td>Handling code rebasing within the context of CI.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>linting</td>
-                                <td>Discussing code style and quality through linting tools in the CI process.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>test coverage</td>
-                                <td>Discussing test coverage in the CI test suite.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI flakiness</td>
-                                <td>Dealing with flaky or inconsistent behavior in CI builds.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI clarification</td>
-                                <td>Providing clarifications and additional information related to CI processes.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI regression</td>
-                                <td>Managing regressions in the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test setup</td>
-                                <td>Discussing the configuration of the environment for running tests in the CI process.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI channel</td>
-                                <td>Discussions related to installations and configuration of CI systems.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test refactoring</td>
-                                <td>Restructuring or improving tests in the CI test suite.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test requirements</td>
-                                <td>Managing the requirements for tests in the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>(mis)trust in CI</td>
-                                <td>Mistrust in the results produced by CI builds.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI explanation</td>
-                                <td>Providing explanations for CI-related processes and decisions.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI infrastructure</td>
-                                <td>Discussing the infrastructure supporting CI.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI as facilitator</td>
-                                <td>Captures conversations centered on streamlining CI processes by integrating external tools or services effectively.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI as quality-gate</td>
-                                <td>Treating CI as a quality gate to ensure high standards in code.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI backporting</td>
-                                <td>Backporting changes or fixes identified in the CI process to previous versions.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI caching</td>
-                                <td>Managing caching strategies to improve CI build performance.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI load</td>
-                                <td>Managing the load on CI infrastructure and resources.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI merge conflicts</td>
-                                <td>Discussing merge conflicts during the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI static analysis</td>
-                                <td>Using static analysis tools to assess code quality in the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>skipping CI</td>
-                                <td>Discussing conditions under which CI builds can be skipped or ignored.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>test instructions</td>
-                                <td>Providing instructions for running tests in the CI environment.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test update</td>
-                                <td>Discussing test update in the CI test suite.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>backwards compatibility</td>
-                                <td>Managing backward compatibility of code changes in the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI build frequency</td>
-                                <td>Discussing the frequency of continuous integration builds.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI correctness</td>
-                                <td>Assessing the correctness of CI build results.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI double-check</td>
-                                <td>Discussing additional checks in the CI build results.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI permissions</td>
-                                <td>Discussing permissions to CI workflows management.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI policy</td>
-                                <td>Establishing policies governing the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI security</td>
-                                <td>Discussing security concerns in the context of CI.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI testability</td>
-                                <td>Discussing how easily testable code changes are in the CI environment.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>integration delay</td>
-                                <td>Discussing the influence of CI on the time reviewers take to integrate code changes in the mainstream.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>multiple jobs</td>
-                                <td>Managing multiple jobs within the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>pipeline setting</td>
-                                <td>Configuring settings for the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test fixture</td>
-                                <td>Setting up fixtures for tests in the CI testing suite.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test guidance</td>
-                                <td>Providing guidance for writing tests in CI.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test readability</td>
-                                <td>Discussing the readability and clarity of test cases in the CI testing suite.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>build system prototype</td>
-                                <td>Discussing the development of prototypes for the build system in CI.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI build complexity</td>
-                                <td>Discussing the complexity in the CI build process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI build size</td>
-                                <td>Discussing the size of the CI build process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI credits</td>
-                                <td>Discussing the usage of CI credits to execute the CI workflow within the CI service.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI effectiveness</td>
-                                <td>Discussing and evaluating the overall effectiveness of the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI stability</td>
-                                <td>Discussing stability and reliability in the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI steps</td>
-                                <td>Defining and organizing the steps in the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>ease of installation</td>
-                                <td>Discussing the ease of installation and setup of the CI environment.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>lack of tests</td>
-                                <td>Discussing the lack of tests in the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>learning CI</td>
-                                <td>Discussing how the CI workflow steps work.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>memory management</td>
-                                <td>Discussing memory usage in the context of CI builds.</td>
-                                <td>non-ML/ML</td>
-                                </tr>
-                                <tr>
-                                <td>model training jobs</td>
-                                <td>Managing jobs related to training machine learning models in the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>multi-pipelines</td>
-                                <td>Discussing the coordination of multiple pipelines within the CI system.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>repository tagging</td>
-                                <td>Discussing the management of version tagging in the repository within CI.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>review delay frustration with green CI</td>
-                                <td>Dealing with frustration related to delays in code reviews despite a green CI.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>scheduled build</td>
-                                <td>Discussing the scheduling of builds in the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test discrepancies</td>
-                                <td>Discussing discrepancies and inconsistencies in test results within the CI test suite.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test freeze</td>
-                                <td>Managing and dealing with test freezes in the CI test suite.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test interaction</td>
-                                <td>Handling interactions and dependencies between tests in the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test issues</td>
-                                <td>Discussing issues related to tests in the CI suite.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test parametrization</td>
-                                <td>Discussing configuration and managing parameters for tests in the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>test removal</td>
-                                <td>Removing and managing tests in the CI suite.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>testing purposes</td>
-                                <td>Discussing the purpose and goals of testing within the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>testing scope</td>
-                                <td>Discussing the scope of testing within the CI pipeline.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>workflow permissions</td>
-                                <td>Managing permissions and access control within the workflow of the CI process.</td>
-                                <td>ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI is stuck</td>
-                                <td>Discussion issues where the CI process is stuck.</td>
-                                <td>non-ML</td>
-                                </tr>
-                                <tr>
-                                <td>test structure</td>
-                                <td>Organizing and structuring the test suite for better clarity and maintenance.</td>
-                                <td>non-ML</td>
-                                </tr>
-                                <tr>
-                                <td>CI service churn</td>
-                                <td>Discussing the churn of the CI services being used.</td>
-                                <td>non-ML</td>
-                                </tr>
-                                <tr>
-                                <td>test guidelines</td>
-                                <td>Discussing about guidelines for writing tests in the CI pipeline.</td>
-                                <td>non-ML</td>
-                                </tr>
-                                <tr>
-                                <td>test size</td>
-                                <td>Discussing the test size within the CI test suite.</td>
-                                <td>non-ML</td>
-                                </tr>
-                                </tbody>
-                            </table>    
+                            <p class="mb-4">Table 1. General themes related to CI discussions in ML and non-ML projects.</p>                                                        
 
                         </div>
                     </div>
